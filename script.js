@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (window.anime) {
         const greetingText = document.getElementById('greetingText');
         const greetings = [
-            'Stay safe from cyber',
+            'Stay safe in cyber space',
             'साइबर से सुरक्षित रहें',
             'সাইবার থেকে নিরাপদ থাকুন',
             'サイバーから安全に過ごしてください',

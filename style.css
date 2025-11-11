@@ -479,16 +479,6 @@ body::selection {
   align-items: center;
 }
 
-#experience  {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  padding: 100px;
-  background-color: #2d2e3273;
-  min-height: 95vh;
-  align-items: center;
-}
-
 
 #skill {
   display: flex;
@@ -1041,6 +1031,7 @@ body, html {
 }
 
 section#research,
+section#experience,
 section#introduction,
 section#skill {
   width: 100%;
@@ -1099,7 +1090,7 @@ h2.impact-title {
 
 /* Keep CyberAlert for greetings */
 #greetingText {
-  font-family: 'CyberAlert', 'Montserrat', 'Roboto', sans-serif;
+  font-family: ' Libre-Baskerville', 'Montserrat', 'Roboto', sans-serif;
   display: inline-block;
   width: 420px;
   min-height: 2.5em;
@@ -1110,7 +1101,7 @@ h2.impact-title {
 }
 
 #greetingText, #greetingText * {
-  font-family: 'CyberAlert', 'Montserrat', 'Roboto', sans-serif !important;
+  font-family: ' Libre-Baskerville', 'Montserrat', 'Roboto', sans-serif !important;
 }
 
 /* Move these to the end for maximum specificity */
@@ -1176,4 +1167,77 @@ h2.impact-title {
   #experience .cards-container {
     max-height: calc((150px * 3) + (20px * 2));
   }
+}
+
+/* ===========================
+   Certificates Section
+=========================== */
+#certificates {
+  margin-top: 4rem;
+  padding: 3rem 1rem;
+}
+
+.cert-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-height: 500px; /* Scrollable area height */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00ff9f #111;
+  padding-right: 0.5rem;
+}
+
+/* Customize scrollbar for Chrome/Edge/Safari */
+.cert-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cert-grid::-webkit-scrollbar-thumb {
+  background-color: #00ff9f;
+  border-radius: 4px;
+}
+
+.cert-grid::-webkit-scrollbar-track {
+  background: #0d0404;
+}
+
+.cert-card {
+  background: rgba(33, 28, 28, 0.975);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #00ff9f;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.cert-card h3 {
+  color: #00ff9f;
+  margin-bottom: 0.5rem;
+}
+
+.cert-card p {
+  margin: 0.3rem 0;
+}
+
+.cert-link {
+  color: #00ff9f;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.cert-link:hover {
+  color: #00ffaa;
+}
+
+.in-progress {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Animation on scroll */
+.cert-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

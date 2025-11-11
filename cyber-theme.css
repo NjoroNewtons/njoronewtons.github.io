@@ -1,0 +1,124 @@
+/* cyber-theme.css */
+/* — CYBER ENERGETIC PORTFOLIO THEME — */
+/* Inspired by green neon terminals and futuristic HUDs */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --cyber-green: #64f4ac;
+  --cyber-dark: #0a0a0f;
+  --cyber-gray: #1a1a20;
+  --cyber-glow: 0 0 10px var(--cyber-green), 0 0 20px var(--cyber-green), 0 0 40px var(--cyber-green);
+}
+
+/* 🌌 Base Background Animation */
+body {
+  background-color: var(--cyber-dark);
+  color: #e5e5e5;
+  font-family: 'Share Tech Mono', monospace;
+  overflow-x: hidden;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(0deg, rgba(100, 244, 172, 0.08) 0px, transparent 2px, transparent 40px),
+    repeating-linear-gradient(90deg, rgba(100, 244, 172, 0.08) 0px, transparent 2px, transparent 40px);
+  background-size: 80px 80px;
+  animation: moveGrid 20s linear infinite;
+  z-index: -2;
+}
+@keyframes moveGrid {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 80px 80px, 80px 80px; }
+}
+
+/* 🔋 Section Headers */
+.section-heading {
+  color: var(--cyber-green);
+  text-shadow: var(--cyber-glow);
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  font-family: 'Orbitron', sans-serif;
+  animation: flicker 2s infinite alternate;
+}
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.3; }
+}
+
+/* 🧠 Cards and Hover Effects */
+.design-card {
+  background-color: var(--cyber-gray);
+  border: 1px solid rgba(100, 244, 172, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(100, 244, 172, 0.2);
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.design-card:hover {
+  transform: perspective(800px) rotateY(6deg) scale(1.02);
+  box-shadow: 0 0 25px rgba(100, 244, 172, 0.5);
+}
+.design-card h3 {
+  color: var(--cyber-green);
+  text-shadow: 0 0 5px var(--cyber-green);
+}
+.design-card p {
+  color: #cfcfcf;
+}
+
+/* 🌈 Buttons */
+button.cyber-btn {
+  background: transparent;
+  border: 2px solid var(--cyber-green);
+  color: var(--cyber-green);
+  font-family: 'Orbitron', sans-serif;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button.cyber-btn:hover {
+  background-color: var(--cyber-green);
+  color: var(--cyber-dark);
+  box-shadow: var(--cyber-glow);
+}
+
+/* 🕶 Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--cyber-green);
+  border-radius: 10px;
+}
+
+/* ✨ Neon glow for section dividers */
+section {
+  border-bottom: 1px solid rgba(100, 244, 172, 0.1);
+  box-shadow: 0 2px 20px rgba(100, 244, 172, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyber-green), transparent);
+  animation: scanLine 3s linear infinite;
+}
+@keyframes scanLine {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}

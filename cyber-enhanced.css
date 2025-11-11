@@ -1,0 +1,29 @@
+/* Digital Rain Background */
+#digitalRain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: black;
+}
+
+/* Fix image alignment and responsiveness */
+.responsive-svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Optional: Slight glow effect for the SVGs */
+.svg-animation img {
+  filter: drop-shadow(0 0 10px #00ff88);
+  animation: pulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from { filter: drop-shadow(0 0 5px #00ff88); }
+  to { filter: drop-shadow(0 0 25px #00ff88); }
+}

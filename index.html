@@ -34,10 +34,22 @@
     <meta name="twitter:description" content="Newton Njoroge's portfolio showcasing projects, skills, and contact information." />
     <meta name="twitter:image" content="https://mukul975.github.io/Portfolio-v2/assets/Mockup.png" />
     <title>Newton Njoroge</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+
     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
     <link rel="icon" href="assets/cyber.svg" type="image/svg+xml">
     <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="assets/cyber-enhanced.css">
+    <script src="assets/cyber-effects.js" defer></script>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cyber-enhanced.css">
+    <link rel="stylesheet" href="cyber-theme.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700&display=swap" rel="stylesheet">
@@ -50,6 +62,9 @@
 </head>
 
 <body>
+<canvas id="digitalRain"></canvas>
+<div class="neon-grid"></div>
+
 
     <section id="header">
         <div class="navbar-title">
@@ -63,8 +78,8 @@
                 <li><a href="#aboutme">About</a></li>
                 <li><a href="#research">Labs</a></li>
                 <li><a href="#introduction">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skill">Skills</a></li>
+                <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#footer">Contacts</a></li>
             </ul>
         </div>
@@ -78,8 +93,8 @@
     </section>
     
     <section id="announcement-banner">
-        <p>Coming soon: <strong>SOC Analyst
-        </strong> - Check it out now!</p>
+        <p> <strong>SOC Analyst
+        </strong> - New projects coming soon!</p>
     </section>
     <section id="content-body">
         <div class="body-part-1">
@@ -90,7 +105,7 @@
                 <p>Tech Innovator</p>
                 <p>Creative Thinker</p>
             </div><br>
-            <h2><span id="greetingText">Stay safe from cyber</span></h2>
+            <h2><span id="greetingText">Stay safe in cyber space</span></h2>
             <div class="body-title">
                 <!-- <h1>Talk is cheap<br>Show me the code</h1> -->
                 <h1>Cybersecurity Guardian</h1>
@@ -98,7 +113,7 @@
                 <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/keltixnewton?hide_gdpr_banner=1&background_color=25262a&text_color=ffffff&primary_color=64f4ac'});return false;">LET'S Connect!</a>
             </div>
             <div class="body-tail">
-                <h1>2</h1>
+                <h1>10+</h1>
                 <p>research<br>labs</p>
                 <h1>5+</h1>
                 <p>PROJECTS<br>COMPLETED</p>
@@ -161,8 +176,8 @@
     <section id="research" style="background-color: #2d2e3273;">
         <div style="display: flex; position: relative; justify-content: space-between; padding: 100px 40px; min-height: 95vh; align-items: center; width: 100vw;">
             <div class="heading-container" style="flex-basis: 100%;">
-                <h3 class="section-heading techy-title">Labs</h3>
-                <p class="creative-title">Research Labs</p>
+                <h3 class="glitch" data-text="Labs" class="section-heading techy-title">Labs</h3>
+                <p data-text="research labs"  class="creative-title">Research Labs</p>
             </div>
             <div class="cards-container">
                 <div class="cards">
@@ -225,145 +240,10 @@
     </section>
 <!--end of research labs-->
 
- <!-- Experience section -->
-    <section id="experience" style="background-color: #3a3b3e73;">
-        <div class="heading-container">
-            <h3 class="section-heading techy-title">Job Experience</h3>
-            <p class="creative-title">Previous Work Experience</p>
-        </div>
-        <div style="display: flex; position: relative; justify-content: space-between; padding: 100px 40px; min-height: 95vh; align-items: center; width: 100vw;">
-            <div class="image-container">
-                <div class="body-part-2">
-                    <div class="container">
-                        <div class="svg-animation">
-                            <img src="assets/work.svg" alt="Project SVG" class="responsive-svg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cards-container">
-                <div class="cards">
-                    <div class="design-card">
-                        <div>
-                            <h4>
-                                <li>COMPANY: Xpress Road Rescue</li>
-                                <li>ROLE: Customer Service & IT Support</li>
-                                <li>PERIOD: July 2024 – Present</li>
-                                <li>TYPE: Full-time, Remote</li>
-                            </h4>
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </div>
-                        <p>
-                            - Provide exceptional customer service by addressing inquiries, resolving issues, and ensuring customer satisfaction.<br>
-                            - Manage and maintain IT infrastructure, including hardware, software, and network systems.<br>
-                            - Troubleshoot technical problems and provide timely solutions to minimize downtime.<br>
-                            - Collaborate with cross-functional teams to implement IT projects and improve operational efficiency.<br>
-                            - Conduct regular system updates and maintenance to ensure optimal performance and security.<br>
-                            - Train staff on new technologies and best practices to enhance overall IT literacy within the organization.
-                        </p>
-                        
-                    </div>
-                    <div class="design-card">
-                        <div>
-                            <h4>
-                                <li>company: ET Net</li>
-                                <li>role: Fiber Engineer (contract)</li>
-                                <li>period: June 2024 – December 2024</li>
-                                <li>type: Full-time, Onsite</li>
-                            </h4>
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </div>
-                        <p>
-                            - Installed, terminated, and tested fiber optic cables for FTTH deployments resulting in seamless connectivity and exceptional service quality.<br>
-                            - Conducted on-site surveys to assess feasibility of installations and recommended suitable solutions. Troubleshot and resolved technical issues related to fiber optic systems. <br>
-                            - Configured and installed fiber optic equipment, including ONTs, fiber splitters, and media converters. <br>
-                            - Collaborated with customers, technicians, and engineers to address customer needs and ensure successful implementation of installations and services, resulting in customer satisfaction. <br>
-                            - Maintained accurate records of installations, repairs, and maintenance activities, documenting changes made to fiber optic systems. <br>
-                            - Installed, maintained and diagnosed CCTV hardware and software systems. <br>
-
-                        </p>
-                        
-                    </div>
-                    <div class="design-card">
-                        <div>
-                            <h4>
-                                <li>COMPANY: Sight and sound Computers LTD</li>
-                                <li>ROLE: IT Engineer </li>
-                                <li>PERIOD: Jul 2023 – May 2024 </li>
-                                <li>TYPE: Full-time, Onsite</li>
-                            </h4>
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </div>
-                        <p>
-                            -  Assist in setting up workstations for clients and making sure systems run smoothly.<br> 
-                            -  Software hardware installation and upgrade.<br>
-                            -  Providing user support and escalating complex issues.<br>
-                            -  Undertaking Preventive maintenance both onsite and offsite basis.<br>
-                            -  Assist in performing troubleshooting to diagnose and resolve simple computer related faults.<br>
-                            -  Computer repairs both onsite and offsite client support.<br>
-                            -  Assist users to connect to LAN, WAN, the internet and Web services.<br>
-                            -  Administered and maintained network infrastructure, including routers, switches, firewalls, and wireless access points.<br>
-                            -  Configured, monitored, and supported VPN connections for secure remote access.<br>   
-                            -  Oversaw and optimized proxy servers to ensure secure and efficient network traffic.<br>
-                            -  Provided hardware maintenance, including troubleshooting and repairing desktops, laptops, and peripherals.<br>
-                            -  Set up and managed conference equipment, including video conferencing systems, projectors, and audio-visual setups.<br>
-                            -  Delivered customer care and technical support to internal users, resolving IT issues promptly to minimize downtime.<br>
-                            -  Ensured data security and backup by implementing best practices in IT management.<br>
-                        </p>
-                        
-                    </div>
-                  
-                    <div class="design-card">
-                        <div>
-                            <h4>
-                                <li>COMPANY: Orion Pharmacy </li>
-                                <li>ROLE: Website and general IT (contract) </li>
-                                <li>PERIOD: Jan 2023- June 2023 </li>
-                                <li>TYPE: Full-time, Hybrid</li>
-                            </h4>
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </div>
-                        <p>
-                            - Database administration and website design Built ad-serving platform that scaled website maintaining POS software installation and maintenance POP3. <br>
-                            -  POP3 Email and setup WordPress environment <br>
-                            -  Database administration and website design <br>
-                            -  Built ad-serving platform that scaled <br>
-                            -  Website Maintaining <br>
-                            -  POS software installation and maintenance <br>
-                            -  POP3 Email and setup <br>
-                            -  WordPress environment
-                        </p>
-                        
-                    </div>
-                    <div class="design-card">
-                        <div>
-                            <h4>
-                                <li>COMPANY: Naivasha sub-county offices</li>
-                                <li>ROLE: IT Intern</li>
-                                <li>PERIOD: January 2020 – June 2020 </li>
-                                <li>TYPE: Full-time, Onsite</li>
-                            </h4>
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </div>
-                        <p>
-                            - Assist users in connecting to LAN, WAN, and the internet.  <br>
-                            - Install and upgrade software and hardware.  <br>
-                            - Provide user support and escalate more complex issues as needed. Perform preventive maintenance both onsite and remotely.  <br>
-                            - Aid in troubleshooting and resolving basic computer-related issues.  <br>
-                            - Conduct computer repairs, offering both onsite and offsite client support. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of Experience section -->
-
-
-    <!-- Projects section -->
+     <!-- Projects section -->
     <section id="introduction" style="background-color: #25262a;">
         <div class="heading-container">
-            <h3 class="section-heading techy-title">Projects</h3>
+            <h3 class="glitch" data-text="Completed " class="section-heading techy-title">Completed Projects</h3>
             <p class="creative-title">Perfect solutions for digital experience</p>
         </div>
         <div style="display: flex; position: relative; justify-content: space-between; padding: 100px 40px; min-height: 95vh; align-items: center; width: 100vw;">
@@ -379,14 +259,14 @@
             <div class="cards-container">
                 <div class="cards">
                     <div class="design-card">
-                       <!-- <div>
+                        <div>
                             <h3>An Enhanced Haze Removal: Using DCP and Enriched-Invariant Features</h3>
                             <i class="fa-solid fa-wand-magic-sparkles"></i>
                         </div>
                         <p>The project proposes an enhanced method for removing haze from images using Dark Channel Prior (DCP) and Enriched-Invariant Features. This approach aims to improve the accuracy and efficiency of existing haze removal techniques, particularly in situations where the visibility is severely impaired by haze.</p>
                         
                     </div>
-                -->    <!--
+                    
                     <div class="design-card">
                         <div>
                             <h3>EmailGuard - Proactive Email Phishing Detection using Artificial Intelligence</h3>
@@ -394,17 +274,7 @@
                         </div>
                         <p>Developed and implemented "EmailGuard," an AI-driven system for detecting phishing emails using 50 extensive features. The system leverages machine learning algorithms and natural language processing to analyze email content and metadata, distinguishing between legitimate and phishing emails. This project significantly enhanced cybersecurity measures, reduced phishing incidents, and improved the overall security posture of the organization.</p>
                         
-                    </div>
-                -->    <!--
-                    <div class="design-card">
-                        <div>
-                            <h3>Multicast Wireless Routing Protocol In Java Programming</h3>
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                        <p>The Multicast Wireless Routing Protocol project in Java programming aims to develop a protocol for efficient data transmission over wireless networks using multicasting. The project involves implementing algorithms to optimize data transmission and minimize delays and packet losses.</p>
-                        
-                    </div>
-                -->    <!--
+                    </div> 
                     <div class="design-card">
                         <div>
                             <h3>Vampire Attacks Draining Life from Wireless Ad Hoc Sensor Networks</h3>
@@ -413,17 +283,7 @@
                         <p>"Vampire Attacks" is a Java-based application that simulates and analyzes the impact of vampire attacks on wireless sensor networks. This application explores the vulnerabilities of such networks and mimics the behavior of energy-draining malicious nodes.</p>
                         
                     </div>
-                -->    <!--
-                    <div class="design-card">
-                        <div>
-                            <h3>
-                                Pack India Packers and Movers Website Development Project
-                                </h3>
-                            <i class="fa-solid fa-terminal"></i>
-                        </div>
-                        <p>I successfully crafted a professional website for Pack India Packer and Movers, highlighting their top-tier relocation services. The site provides seamless user experience, valuable information, and easy client interaction, bolstering Pack India's online presence and their mission of smooth moving solutions.</p>
-                    </div>
-                -->
+                  
                 
                 </div>
             </div>
@@ -433,7 +293,7 @@
 
     <section id="skill" style="background-color: #2d2e3273;">
         <div class="heading-container">
-            <h3 class="section-heading techy-title">Skills</h3>
+            <h3 class="glitch" data-text="Skills & Certifications" class="section-heading techy-title">Skills & Certifications</h3>
             <p class="creative-title">Technical expertise and tools</p>
         </div>
         <div style="display: flex; position: relative; justify-content: space-between; padding: 100px 40px; min-height: 95vh; align-items: center; width: 100vw;">
@@ -456,14 +316,14 @@
                         <p>Threat Detection • Network Security • Cybersecurity Architecture • Ethical Hacking • Social Engineering • Information Security Management System (ISMS) • IT Audit • IT Security Assessments • Penetration Testing</p>
                         
                     </div>
-                    <!--<div class="design-card">
+                    <div class="design-card">
                         <div>
                             <h3>AI & Machine Learning</h3>
                             <i class="fa-solid fa-wand-magic-sparkles"></i>
                         </div>
                         <p> • Machine Learning • AI Model Training • Data Analysis </p>
                         
-                    </div> -->
+                    </div>
 
                     <div class="design-card">
                         <div>
@@ -481,7 +341,14 @@
                         <p>Google Cloud Platform (GCP) • Adobe Photoshop • Computer Science • Software Development • English • Project Management • Engineering • Communication • Training • Leadership • Marketing • Customer Service • Microsoft Office</p>
                         
                     </div>
-                    
+                    <!-- Certificates Section -->
+<section id="certificates" class="section">
+  <div class="container">
+    <h2 class="section-title">Certificates</h2>
+    <div id="certificates-container" class="cert-grid"></div>
+  </div>
+</section>
+                           
                 </div>
             </div>
             <div class="image-container">
@@ -580,6 +447,8 @@ window.onload = function() {
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
     <!-- <script src="script.js"></script> -->
     <script src="script.js"></script>
+    <script src="pages/certificates.js"></script>
+    <script src="cyber-effects.js"></script>
 </body>
 
 </html>

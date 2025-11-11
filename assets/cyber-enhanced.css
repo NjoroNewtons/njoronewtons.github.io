@@ -1,0 +1,119 @@
+/* === CYBER ENHANCED STYLES === */
+
+/* MATRIX DIGITAL RAIN CANVAS */
+#digitalRain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  background: #000;
+  pointer-events: none;
+}
+
+/* NEON GRID OVERLAY */
+.neon-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(0, 255, 136, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(0, 255, 136, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -1;
+  animation: gridMove 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes gridMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+/* GLOW + PULSE EFFECTS FOR SVG IMAGES */
+.svg-animation img,
+.responsive-svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 8px #00ff88);
+  transition: all 0.3s ease;
+  animation: pulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    filter: drop-shadow(0 0 5px #00ff88);
+  }
+  100% {
+    filter: drop-shadow(0 0 25px #00ff88);
+  }
+}
+
+/* GLITCH HEADING EFFECT */
+.glitch {
+  position: relative;
+  color: #00ff88;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  animation: flicker 2s infinite;
+  letter-spacing: 2px;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.8;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00ff;
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #00ffff;
+  animation: glitch-anim2 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(10px, 9999px, 44px, 0); }
+  20% { clip: rect(85px, 9999px, 140px, 0); }
+  40% { clip: rect(10px, 9999px, 40px, 0); }
+  60% { clip: rect(50px, 9999px, 80px, 0); }
+  80% { clip: rect(90px, 9999px, 130px, 0); }
+  100% { clip: rect(0, 9999px, 9999px, 0); }
+}
+
+@keyframes glitch-anim2 {
+  0% { clip: rect(60px, 9999px, 100px, 0); }
+  25% { clip: rect(0, 9999px, 50px, 0); }
+  50% { clip: rect(80px, 9999px, 140px, 0); }
+  75% { clip: rect(10px, 9999px, 60px, 0); }
+  100% { clip: rect(30px, 9999px, 90px, 0); }
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.3;
+  }
+}
